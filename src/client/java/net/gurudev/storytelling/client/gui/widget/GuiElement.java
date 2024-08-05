@@ -1,4 +1,4 @@
-package net.gurudev.storytelling.gui.widget;
+package net.gurudev.storytelling.client.gui.widget;
 
 public class GuiElement {
     public final int centerX, centerY, guiWidth, guiHeight;

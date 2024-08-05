@@ -1,4 +1,4 @@
-package net.gurudev.storytelling.mixin.client;
+package net.gurudev.storytelling.client.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

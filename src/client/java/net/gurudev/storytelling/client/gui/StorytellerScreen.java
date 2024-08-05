@@ -1,9 +1,9 @@
-package net.gurudev.storytelling.gui;
+package net.gurudev.storytelling.client.gui;
 
+import net.gurudev.storytelling.client.gui.widget.GuiElement;
 import net.gurudev.storytelling.entity.StorytellerEntity;
-import net.gurudev.storytelling.gui.widget.ButtonRowElement;
-import net.gurudev.storytelling.gui.widget.GuiElement;
-import net.gurudev.storytelling.gui.widget.TextRowElement;
+import net.gurudev.storytelling.client.gui.widget.ButtonRowElement;
+import net.gurudev.storytelling.client.gui.widget.TextRowElement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;

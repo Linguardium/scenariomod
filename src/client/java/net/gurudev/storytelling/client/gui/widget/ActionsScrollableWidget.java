@@ -1,4 +1,4 @@
-package net.gurudev.storytelling.gui.widget;
+package net.gurudev.storytelling.client.gui.widget;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.narration.NarrationMessageBuilder;

@@ -1,5 +1,7 @@
 package net.gurudev.storytelling.entity;
 
+import com.google.common.collect.ImmutableList;
+import net.gurudev.storytelling.StorytellingMod;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.nbt.NbtCompound;
@@ -12,10 +14,11 @@ import java.util.List;
 
 public class StorytellerEntity extends PathAwareEntity {
 	private final List<StorylineAction> actions = new ArrayList<>();
-	private String texture; private String model;
+	private String texture;
+	private String model;
 	public int currentStep;
 
-	public List<StorylineAction> getActions() { return this.actions; }
+	public ImmutableList<StorylineAction> getActions() { return ImmutableList.copyOf(this.actions); }
 	public void addAction(StorylineAction action) { this.actions.add(action); }
 
 	public StorytellerEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
@@ -23,7 +26,7 @@ public class StorytellerEntity extends PathAwareEntity {
 	}
 
 	public void performStory() {
-		System.out.println(actions.size());
+		StorytellingMod.LOGGER.debug("Performing story actions. Action list size: {}", actions.size());
 		if (currentStep < actions.size()) {
 			actions.get(currentStep).execute(this);
 		} else { currentStep = 0; }
@@ -32,6 +35,7 @@ public class StorytellerEntity extends PathAwareEntity {
 	public String getTexture() { return texture; }
 	public String getModel() { return model; }
 
+	// TODO: entity components
 	public void writeCustomDataToNbt(NbtCompound nbt) {
 		nbt.putString("texture", this.texture); nbt.putString("model", this.model);
 		NbtList actions = new NbtList(); this.getActions().forEach(data -> {

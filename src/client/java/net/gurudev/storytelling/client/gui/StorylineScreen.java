@@ -1,10 +1,10 @@
-package net.gurudev.storytelling.gui;
+package net.gurudev.storytelling.client.gui;
 
+import net.gurudev.storytelling.client.gui.widget.ActionsScrollableWidget;
+import net.gurudev.storytelling.client.gui.widget.DataFieldWidget;
+import net.gurudev.storytelling.client.gui.widget.GuiElement;
 import net.gurudev.storytelling.entity.StorylineAction;
 import net.gurudev.storytelling.entity.StorytellerEntity;
-import net.gurudev.storytelling.gui.widget.ActionsScrollableWidget;
-import net.gurudev.storytelling.gui.widget.DataFieldWidget;
-import net.gurudev.storytelling.gui.widget.GuiElement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
@@ -16,7 +16,7 @@ import net.minecraft.text.Text;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+// TODO: Handled screen with server interaction 
 public class StorylineScreen extends Screen {
 	private final StorytellerEntity entity;
 

@@ -20,10 +20,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": ["net.gurudev.storytelling.StorytellingMod"],
-		"client": ["net.gurudev.storytelling.StorytellingClient"]
+		"client": [
+			"net.gurudev.storytelling.client.StorytellingClient"
+		]
 	},
 	"mixins": [
-		"storytelling.mixins.json", {
+		"storytelling.mixins.json",
+		{
 			"config": "storytelling.client.mixins.json",
 			"environment": "client"
 		}

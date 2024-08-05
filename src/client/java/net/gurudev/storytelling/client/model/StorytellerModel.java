@@ -1,4 +1,4 @@
-package net.gurudev.storytelling.model;
+package net.gurudev.storytelling.client.model;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -11,7 +11,7 @@ import com.google.common.collect.ImmutableList;
 import net.gurudev.storytelling.entity.StorytellerEntity;
 import net.minecraft.util.math.MathHelper;
 
-import static net.gurudev.storytelling.StorytellingClient.MOD_ID;
+import static net.gurudev.storytelling.StorytellingMod.MOD_ID;
 
 public class StorytellerModel extends EntityModel<StorytellerEntity> {
     public static final EntityModelLayer TEXTURE = new EntityModelLayer(Identifier.of(MOD_ID, "storyteller"), "main");

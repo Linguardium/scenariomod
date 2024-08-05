@@ -1,8 +1,10 @@
 {
 	"required": true,
-	"package": "net.gurudev.storytelling.mixin.client",
+	"package": "net.gurudev.storytelling.client.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"client": ["StorytellingClientMixin"],
+	"client": [
+		"StorytellingClientMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	}

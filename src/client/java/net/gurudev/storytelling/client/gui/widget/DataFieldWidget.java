@@ -1,4 +1,4 @@
-package net.gurudev.storytelling.gui.widget;
+package net.gurudev.storytelling.client.gui.widget;
 
 import net.gurudev.storytelling.entity.StorylineAction;
 import net.minecraft.client.font.TextRenderer;
