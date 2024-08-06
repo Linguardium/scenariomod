@@ -2,9 +2,13 @@ package net.gurudev.storytelling.entity;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
+import net.minecraft.text.Text;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
+
+import static net.gurudev.storytelling.StorytellingMod.MOD_ID;
 
 public class StorylineAction {
     private String type; private HashMap<String, Object> params;
@@ -38,5 +42,9 @@ public class StorylineAction {
     }
 
     public Map<String, Object> getParams() { return params; }
+    public String getTranslationKey() {
+        return MOD_ID + ".actions.type." + getType().toLowerCase(Locale.ROOT);
+    }
+    public Text getDisplayText() { return Text.translatable(this.getTranslationKey()); }
     public String getType() { return type; }
 }

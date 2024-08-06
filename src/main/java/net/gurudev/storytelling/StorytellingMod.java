@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static net.gurudev.storytelling.entity.EntityManager.registerEntities;
+import static net.gurudev.storytelling.gui.ScreenHandlerManager.registerScreenHandlers;
 import static net.gurudev.storytelling.item.ItemManager.registerItems;
 
 public class StorytellingMod implements ModInitializer {
@@ -20,6 +21,9 @@ public class StorytellingMod implements ModInitializer {
 
 		LOGGER.info("Registering entities...");
 		registerEntities();
+
+		LOGGER.info("Registering screen handlers...");
+		registerScreenHandlers();
 
 		LOGGER.info("The world was written using Storytelling");
 
